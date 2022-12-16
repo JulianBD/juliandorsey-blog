@@ -1,0 +1,23 @@
+---
+layout: base.njk
+title: Julian's Blog
+eleventyNavigation:
+    key: home
+    order: 1
+---
+
+<h1>Julian Dorsey</h1>
+
+<p><strong class="emphasis">Hi there!</strong> 👋🏾 I'm a DevOps engineer living in Philadelphia.
+  During the day I work with AWS and Kubernetes at <a class= "external-link" href="https://www.elsevier.com/health/nursing">Elsevier</a>. 
+  When I'm not working I play piano, enjoy cooking, and learn new technologies.
+  On this blog, I write about what I'm currently learning, music I'm listening to, and other musings.
+</p>
+<h2>posts</h2>
+<ul>
+  {%- for post in collections.general %}
+    <li>
+      <a href="{{ post.url }}">{{ post.data.title }}</a>
+    </li>
+  {% endfor -%}
+</ul>
